@@ -22,3 +22,8 @@ declare module '*.svg' {
   const content: string;
   export default content;
 }
+
+declare module '../amplify_outputs.json' {
+  const value: any;
+  export default value;
+}
