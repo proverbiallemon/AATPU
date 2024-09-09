@@ -1,14 +1,23 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    nodePolyfills({
+      protocolImports: true,
+    }),
+  ],
   build: {
     outDir: 'dist',
     emptyOutDir: true,
   },
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx']
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
   },
   assetsInclude: ['**/*.webp'],
+  define: {
+    global: 'window',
+  },
 })

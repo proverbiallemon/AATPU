@@ -1,25 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
+import { Amplify } from "aws-amplify";
 
-// Dynamic import of amplify_outputs.json
-const getAmplifyOutputs = async () => {
-  try {
-    return await import('../amplify_outputs.json')
-  } catch (error) {
-    console.warn('Failed to load amplify_outputs.json:', error)
-    return {}
-  }
-}
+// For Amplify v2, we don't import config separately
+// The configuration will be injected by the Amplify build process
+Amplify.configure({});
 
-getAmplifyOutputs().then((amplifyOutputs) => {
-  // You can use amplifyOutputs here if needed
-  console.log('Amplify outputs:', amplifyOutputs)
-  
-  ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-  )
-})
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
