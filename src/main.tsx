@@ -2,14 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
-import { Amplify } from "aws-amplify";
+import '@aws-amplify/ui-react/styles.css';
+import { ThemeProvider } from '@aws-amplify/ui-react';
+import { Amplify } from 'aws-amplify';
+import config from './aws-exports';
 
-// For Amplify v2, we don't import config separately
-// The configuration will be injected by the Amplify build process
-Amplify.configure({});
+Amplify.configure(config);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
