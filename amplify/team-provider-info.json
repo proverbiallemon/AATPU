@@ -1,20 +1,15 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-aatpu-dev-78642-authRole",
-      "UnauthRoleArn": "arn:aws:iam::586775470064:role/amplify-aatpu-dev-78642-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::586775470064:role/amplify-aatpu-dev-78642-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-aatpu-dev-78642-deployment",
-      "UnauthRoleName": "amplify-aatpu-dev-78642-unauthRole",
-      "StackName": "amplify-aatpu-dev-78642",
-      "StackId": "arn:aws:cloudformation:us-east-1:586775470064:stack/amplify-aatpu-dev-78642/ce2e9630-6eaa-11ef-b367-0e651dc79821",
-      "AmplifyAppId": "d3sei5ymw233of"
-    },
-    "categories": {
-      "api": {
-        "aatpu": {}
-      }
+      "AuthRoleName": "amplify-aatpu-dev-5c5ac-authRole",
+      "UnauthRoleArn": "arn:aws:iam::586775470064:role/amplify-aatpu-dev-5c5ac-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::586775470064:role/amplify-aatpu-dev-5c5ac-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-aatpu-dev-5c5ac-deployment",
+      "UnauthRoleName": "amplify-aatpu-dev-5c5ac-unauthRole",
+      "StackName": "amplify-aatpu-dev-5c5ac",
+      "StackId": "arn:aws:cloudformation:us-east-2:586775470064:stack/amplify-aatpu-dev-5c5ac/94191590-717c-11ef-98ef-02f312569bd7",
+      "AmplifyAppId": "d28mouwwe2v4u1"
     }
   }
 }
